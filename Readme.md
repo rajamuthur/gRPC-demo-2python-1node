@@ -1,30 +1,30 @@
 ## Project Overview
 This project demonstrates how microservices communicate with each other using gRPC.
 When a user logs in:
-# 1. AuthPythonMicroService is triggered
-# 2. From the Auth service, gRPC calls are made to:
+### 1. AuthPythonMicroService is triggered
+### 2. From the Auth service, gRPC calls are made to:
     - Audit microservice
     - Notification microservice
     - Profile microservice
 
-# 3. Each service processes the request and returns a response back to the Auth service
-
-- This project also shows:
-1. Request/response communication (not just triggering)
-2. Timeout handling
-3. Behavior when a service is down
-4. Cross-language gRPC communication (Python ↔ Node.js)
+### 3. Each service processes the request and returns a response back to the Auth service
 
 
+## This project also shows:
+    - Request/response communication (not just triggering)
+    - Timeout handling
+    - Behavior when a service is down
+    - Cross-language gRPC communication (Python ↔ Node.js)
 
-**
+
 --- 
+
 ### Microservices in This Project
 AuthPythonMicroService - Python Micro Service (gRPC Client)
 AuditPythonMicroService - Python Micro Service (gRPC Server1)
 NotificationPythonMicroService - Python Micro Service (gRPC Server2)
 ProfileNodeMicroService - Node Micro Service (gRPC Server3)
-**
+
 ---
 
 ### gRPC Contract
