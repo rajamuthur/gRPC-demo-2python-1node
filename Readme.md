@@ -16,16 +16,11 @@ When a user logs in:
     - Behavior when a service is down
     - Cross-language gRPC communication (Python ↔ Node.js)
 
-
---- 
-
 ### Microservices in This Project
-AuthPythonMicroService - Python Micro Service (gRPC Client)
-AuditPythonMicroService - Python Micro Service (gRPC Server1)
-NotificationPythonMicroService - Python Micro Service (gRPC Server2)
-ProfileNodeMicroService - Node Micro Service (gRPC Server3)
-
----
+    - AuthPythonMicroService - Python Micro Service (gRPC Client)
+    - AuditPythonMicroService - Python Micro Service (gRPC Server1)
+    - NotificationPythonMicroService - Python Micro Service (gRPC Server2)
+    - ProfileNodeMicroService - Node Micro Service (gRPC Server3)
 
 ### gRPC Contract
 All services use a common gRPC contract defined in:
@@ -53,6 +48,8 @@ Then install
     npm init -y
     npm install @grpc/grpc-js @grpc/proto-loader
 
+--- 
+
 ## How to Run the Services
 Open four terminals and start the services as shown below.
 ### Terminal 1 – Notification
@@ -68,6 +65,7 @@ Open four terminals and start the services as shown below.
 ### Terminal 4 – Auth
     python -m AuthPythonMicroService.auth_service
 
+---
 
 ## Demo
 ### When all services are up and running, the Auth service successfully calls:
