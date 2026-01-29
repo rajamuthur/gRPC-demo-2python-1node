@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package services;
+
+/* ---------- Notification ---------- */
+service NotificationService {
+  rpc SendLoginNotification (LoginRequest)
+      returns (ServiceResponse);
+}
+
+/* ---------- Audit ---------- */
+service AuditService {
+  rpc LogLoginEvent (LoginRequest)
+      returns (ServiceResponse);
+}
+
+/* ---------- Profile ---------- */
+service ProfileService {
+  rpc CreateLoginProfile (LoginRequest) 
+    returns (ServiceResponse);
+}
+
+/* ---------- Common messages ---------- */
+message LoginRequest {
+  int32 user_id = 1;
+  string username = 2;
+}
+
+message ServiceResponse {
+  bool success = 1;
+  string message = 2;
+}
